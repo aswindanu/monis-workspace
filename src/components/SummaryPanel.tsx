@@ -12,10 +12,10 @@ export default function SummaryPanel() {
     monitor: 200000,
     lamp: 50000,
     plant: 40000,
-    coffeeStation: 150,
-    outdoorGear: 300,
-    relaxZone: 200,
-    garageSpace: 400,
+    coffeeStation: 15000,
+    outdoorGear: 30000,
+    relaxZone: 20000,
+    garageSpace: 40000,
   }
 
   const total =
