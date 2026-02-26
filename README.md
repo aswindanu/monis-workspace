@@ -47,7 +47,7 @@ Styling is implemented using Tailwind CSS for:
 - Easy theming system (dark, warm, light modes)
 - Custom classes and minimal CSS are used where necessary for fine-tuned behavior.
 
-🛠 Tech Stack and Future Improvement
+### 🛠 Tech Stack and Future Improvement
 
 - Framework: Next.js (App Router)
 - Styling: Tailwind CSS
@@ -59,7 +59,7 @@ Styling is implemented using Tailwind CSS for:
 - Runtime: Node.js 
 
 
-📦 Features
+### 📦 Features
 
 - Drag-and-drop interactive canvas
 - Dynamic item toggling
@@ -69,11 +69,11 @@ Styling is implemented using Tailwind CSS for:
 - Real-time summary price calculation
 - Expandable architecture for future enhancements
 
-🔮 Future Improvements
+## 🔮 Future Improvements
 
 The current implementation focuses on flexibility and simplicity. However, several areas can be enhanced:
 
-🎨 1. UI Enhancement
+#### 🎨 1. UI Enhancement
 
 Instead of custom Tailwind-based UI:
 
@@ -81,7 +81,7 @@ Instead of custom Tailwind-based UI:
 - Improve design consistency and accessibility
 - Implement standardized component systems
 
-🎭 2. Advanced Styling System
+#### 🎭 2. Advanced Styling System
 
 Replace or enhance plain CSS with:
 
@@ -90,7 +90,7 @@ Replace or enhance plain CSS with:
 - Advanced mixins and modular styles
 - Improved maintainability for larger-scale UI systems
 
-⚡ 3. Performance Optimization
+#### ⚡ 3. Performance Optimization
 
 Fully adopt Turbopack for faster development builds
 
@@ -98,7 +98,7 @@ Fully adopt Turbopack for faster development builds
 - Dynamic imports for heavy modules
 - Image optimization strategy
 
-🐳 4. Containerization & Scalability
+#### 🐳 4. Containerization & Scalability
 
 If the project grows into a production-grade SaaS platform:
 
@@ -108,7 +108,7 @@ If the project grows into a production-grade SaaS platform:
 - Add API layer (Node/Express or NestJS)
 - Database integration (PostgreSQL / MongoDB)
 
-🏗 5. Microservice Architecture (Future Vision)
+#### 🏗 5. Microservice Architecture (Future Vision)
 
 If scaled into a marketplace platform:
 
@@ -118,7 +118,7 @@ If scaled into a marketplace platform:
 - Layout export/render service
 - Payment integration
 
-📈 Scalability Vision
+## 📈 Scalability Vision
 
 This project is structured to evolve into:
 
@@ -130,13 +130,9 @@ This project is structured to evolve into:
 🧩 Why This Stack?
 
 Next.js → Modern, production-ready React framework
-
 Zustand → Simple and scalable state management
-
 Tailwind CSS → Rapid development and flexibility
-
 Framer Motion → Smooth and interactive UX
-
 The combination allows rapid iteration while remaining scalable.
 
 
