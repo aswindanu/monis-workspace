@@ -59,6 +59,87 @@ Styling is implemented using Tailwind CSS for:
 - Runtime: Node.js 
 
 
+📦 Features
+
+- Drag-and-drop interactive canvas
+- Dynamic item toggling
+- Theme switching (Light / Warm / Dark)
+- Lighting system (Window / All On / Off)
+- Modular zone additions
+- Real-time summary price calculation
+- Expandable architecture for future enhancements
+
+🔮 Future Improvements
+
+The current implementation focuses on flexibility and simplicity. However, several areas can be enhanced:
+
+🎨 1. UI Enhancement
+
+Instead of custom Tailwind-based UI:
+
+- Integrate Material UI (MUI) or another mature UI framework
+- Improve design consistency and accessibility
+- Implement standardized component systems
+
+🎭 2. Advanced Styling System
+
+Replace or enhance plain CSS with:
+
+- SASS / SCSS for structured styling
+- Better variable management
+- Advanced mixins and modular styles
+- Improved maintainability for larger-scale UI systems
+
+⚡ 3. Performance Optimization
+
+Fully adopt Turbopack for faster development builds
+
+- Code splitting improvements
+- Dynamic imports for heavy modules
+- Image optimization strategy
+
+🐳 4. Containerization & Scalability
+
+If the project grows into a production-grade SaaS platform:
+
+- Introduce Docker & Docker Compose
+- Separate frontend and backend services
+- Prepare for microservice architecture
+- Add API layer (Node/Express or NestJS)
+- Database integration (PostgreSQL / MongoDB)
+
+🏗 5. Microservice Architecture (Future Vision)
+
+If scaled into a marketplace platform:
+
+- Pricing service
+- User authentication service
+- Order management service
+- Layout export/render service
+- Payment integration
+
+📈 Scalability Vision
+
+This project is structured to evolve into:
+
+- A workspace rental simulation platform
+- A B2B office configuration tool
+- A SaaS interior planning builder
+- A marketplace-style configurator
+
+🧩 Why This Stack?
+
+Next.js → Modern, production-ready React framework
+
+Zustand → Simple and scalable state management
+
+Tailwind CSS → Rapid development and flexibility
+
+Framer Motion → Smooth and interactive UX
+
+The combination allows rapid iteration while remaining scalable.
+
+
 ## Getting Started
 
 First, run the development server:
