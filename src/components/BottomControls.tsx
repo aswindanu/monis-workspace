@@ -10,7 +10,7 @@ export default function BottomControls() {
     <div className="mt-6 p-4 bg-white rounded-xl shadow flex flex-wrap gap-6 justify-between">
 
       <div>
-        <h4 className="font-semibold text-semibold-color">Theme</h4>
+        <h4 className="font-semibold text-semibold-color">Suggestion</h4>
         <div className="flex gap-2 mt-2">
           <button onClick={() => setTheme('light')} className="btn">Light</button>
           <button onClick={() => setTheme('warm')} className="btn">Warm</button>
@@ -19,7 +19,7 @@ export default function BottomControls() {
       </div>
 
       <div>
-        <h4 className="font-semibold text-semibold-color">Background</h4>
+        <h4 className="font-semibold text-semibold-color">Workspace</h4>
         <div className="flex gap-2 mt-2">
           <button onClick={() => setBackground('office')} className="btn">Office</button>
           <button onClick={() => setBackground('gaming')} className="btn">Gaming</button>
@@ -29,7 +29,7 @@ export default function BottomControls() {
       </div>
 
       <div>
-        <h4 className="font-semibold text-semibold-color">Light</h4>
+        <h4 className="font-semibold text-semibold-color">Lightning</h4>
         <div className="flex gap-2 mt-2">
           <button onClick={() => setLighting('all')} className="btn">All On</button>
           <button onClick={() => setLighting('window')} className="btn">Window</button>
