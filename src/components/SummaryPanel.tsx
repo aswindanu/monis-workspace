@@ -8,7 +8,7 @@ export default function SummaryPanel() {
 
   const prices = {
     desk: desk === 'wood' ? 300000 : 500000,
-    chair: chair === 'ergonomic' ? 250000 : 150000,
+    chair: chair === 'gaming' ? 250000 : 150000,
     monitor: 200000,
     lamp: 50000,
     plant: 40000,
