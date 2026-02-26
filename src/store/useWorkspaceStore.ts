@@ -10,7 +10,7 @@ type Position = { x: number; y: number }
 
 type WorkspaceState = {
   desk: 'wood' | 'standing'
-  chair: 'ergonomic' | 'minimal'
+  chair: 'gaming' | 'minimal'
   monitors: number
   lamp: boolean
   plant: boolean
@@ -19,6 +19,11 @@ type WorkspaceState = {
   theme: Theme
   background: BackgroundType
   lighting: Lighting
+
+  coffeeStation: boolean,
+  outdoorGear: boolean,
+  relaxZone: boolean,
+  garageSpace: boolean,
 
   colors: {
     desk: string
@@ -34,11 +39,17 @@ type WorkspaceState = {
   }
 
   setDesk: (desk: 'wood' | 'standing') => void
-  setChair: (chair: 'ergonomic' | 'minimal') => void
+  setChair: (chair: 'gaming' | 'minimal') => void
   addMonitor: () => void
   removeMonitor: () => void
   toggleLamp: () => void
   togglePlant: () => void
+
+  toggleCoffeeStation: () => void
+  toggleOutdoorGear: () => void
+  toggleRelaxZone: () => void
+  toggleGarageSpace: () => void
+
   setDuration: (d: 'weekly' | 'monthly') => void
   setPosition: (key: keyof WorkspaceState['positions'], pos: Position) => void
 
@@ -50,7 +61,7 @@ type WorkspaceState = {
 
 export const useWorkspaceStore = create<WorkspaceState>((set) => ({
   desk: 'wood',
-  chair: 'ergonomic',
+  chair: 'gaming',
   monitors: 1,
   lamp: true,
   plant: true,
@@ -60,6 +71,11 @@ export const useWorkspaceStore = create<WorkspaceState>((set) => ({
   background: 'office',
   lighting: 'all',
 
+  coffeeStation: false,
+  outdoorGear: false,
+  relaxZone: false,
+  garageSpace: false,
+
   colors: {
     desk: '#8b5e3c',
     chair: '#1f2937',
@@ -68,9 +84,9 @@ export const useWorkspaceStore = create<WorkspaceState>((set) => ({
   },
 
   positions: {
-    chair: { x: 0, y: 0 },
-    lamp: { x: 100, y: -50 },
-    plant: { x: 150, y: 0 },
+    chair: { x: -192, y: 92 },
+    lamp: { x: 33, y: 9 },
+    plant: { x: 86, y: 80 },
   },
 
   setDesk: (desk) => set({ desk }),
@@ -85,6 +101,19 @@ export const useWorkspaceStore = create<WorkspaceState>((set) => ({
     })),
   toggleLamp: () => set((state) => ({ lamp: !state.lamp })),
   togglePlant: () => set((state) => ({ plant: !state.plant })),
+
+  toggleCoffeeStation: () =>
+    set((state) => ({ coffeeStation: !state.coffeeStation })),
+
+  toggleOutdoorGear: () =>
+    set((state) => ({ outdoorGear: !state.outdoorGear })),
+
+  toggleRelaxZone: () =>
+    set((state) => ({ relaxZone: !state.relaxZone })),
+
+  toggleGarageSpace: () =>
+    set((state) => ({ garageSpace: !state.garageSpace })),
+
   setDuration: (duration) => set({ duration }),
 
   setPosition: (key, pos) =>
@@ -92,7 +121,28 @@ export const useWorkspaceStore = create<WorkspaceState>((set) => ({
       positions: { ...state.positions, [key]: pos },
     })),
 
-  setTheme: (theme) => set({ theme }),
+  setTheme: (theme) => {
+    const newVal: any = { theme };
+    if ( theme === 'light') {
+      newVal.plant = true;
+      newVal.lamp = true;
+      newVal.lighting = 'window';
+      newVal.background = 'white';
+    }
+    else if ( theme === 'warm') {
+      newVal.plant = true;
+      newVal.lamp = true;
+      newVal.lighting = 'all';
+      newVal.background = 'office';
+    }
+    else if ( theme === 'dark') {
+      newVal.plant = true;
+      newVal.lamp = false;
+      newVal.lighting = 'all';
+      newVal.background = 'gaming';
+    }
+    set(newVal);
+  },
   setBackground: (background) => set({ background }),
   setLighting: (lighting) => set({ lighting }),
   setColor: (key, color) =>

@@ -3,7 +3,7 @@
 import { useWorkspaceStore } from '@/store/useWorkspaceStore'
 
 export default function SummaryPanel() {
-  const { desk, chair, monitors, lamp, plant, duration, setDuration } =
+  const { desk, chair, monitors, lamp, plant, duration, coffeeStation, outdoorGear, relaxZone, garageSpace, setDuration } =
     useWorkspaceStore()
 
   const prices = {
@@ -12,6 +12,10 @@ export default function SummaryPanel() {
     monitor: 200000,
     lamp: 50000,
     plant: 40000,
+    coffeeStation: 150,
+    outdoorGear: 300,
+    relaxZone: 200,
+    garageSpace: 400,
   }
 
   const total =
@@ -19,7 +23,11 @@ export default function SummaryPanel() {
     prices.chair +
     monitors * prices.monitor +
     (lamp ? prices.lamp : 0) +
-    (plant ? prices.plant : 0)
+    (plant ? prices.plant : 0) +
+    (coffeeStation ? prices.coffeeStation : 0) +
+    (outdoorGear ? prices.outdoorGear : 0) +
+    (relaxZone ? prices.relaxZone : 0) +
+    (garageSpace ? prices.garageSpace : 0)
 
   const finalTotal = duration === 'weekly' ? total / 4 : total
 
@@ -33,6 +41,10 @@ export default function SummaryPanel() {
         <p>Monitors: {monitors}</p>
         <p>Lamp: {lamp ? 'Yes' : 'No'}</p>
         <p>Plant: {plant ? 'Yes' : 'No'}</p>
+        <p>coffee Station: {coffeeStation ? 'Yes' : 'No'}</p>
+        <p>outdoor Gear: {outdoorGear ? 'Yes' : 'No'}</p>
+        <p>relax Zone: {relaxZone ? 'Yes' : 'No'}</p>
+        <p>garage Space: {garageSpace ? 'Yes' : 'No'}</p>
       </div>
 
       <div>
